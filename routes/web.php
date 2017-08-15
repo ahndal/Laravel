@@ -47,3 +47,14 @@ Route::get('/', [
 Route::get('/home', function () {
     return redirect(route('home'));
 });
+
+Route::get('/', function () {
+    return view('errors.503');
+});
+
+Route::get('/', function () {
+    return view('welcome1')->with([
+        'name' => 'Foo',
+        'greeting' => '안녕하세요?'
+    ]);
+});
